@@ -42,8 +42,8 @@
 
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a role="button" class="btn btn-lg btn-info" data-toggle="modal"
-                      data-target="#reserveModal" >Reserve Campsite</a>
+                    <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve
+                        Campsite</a>
                 </div>
             </div>
         </div>
@@ -84,21 +84,24 @@
                                 <div class="row form-group">
                                     <label class="col-sm-6 col-form-label ">Campsite Type</label>
                                     <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                        
-                                            <label class="btn btn-success active">
-                                              <input type="radio" name="options" id="siteTent" value="tent" autocomplete="off" checked> Tent
-                                            </label>
-                                            <label class="btn btn-primary">
-                                              <input type="radio" name="options" id="siteRV" value="rv" autocomplete="off"> RV
-                                            </label>
-                                            
-                                          
+
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="siteTent" value="tent"
+                                                autocomplete="off" checked> Tent
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="siteRV" value="rv"
+                                                autocomplete="off"> RV
+                                        </label>
+
+
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col">
                                         <button type="submit" class="btn btn-primary">Search</button>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
                             </form>
@@ -227,7 +230,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
-
+                    <div class="btn-group" id="carouselButton">
+                        <div class="btn btn-danger btn-small">
+                            <i class="fa fa-pause" id="carouselPause"></i>
+                        </div>
+                        <div class="btn btn-danger btn-small">
+                            <i class="fa fa-play" id="carouselPlay"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -285,46 +295,54 @@
                     </div>
                 </div>
             </div>
-            
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-sm-2 offset-1">
-                        <h5>Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="aboutus.html">About</a></li>
-                            <li><a href="#">Sites</a></li>
-                            <li><a href="contactus.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-sm-5 text-center">
-                        <h5>Social</h5>
-                        <a href="http://instagram.com/"><i class="fa fa-instagram"></i> Instagram</a>
-                        <a href="http://facebook.com/"><i class="fa fa-facebook "></i> Facebook</a>
-                        <a href="http://twitter.com/"><i class="fa fa-twitter"></i> Twitter</a>
-                        <a href="http://youtube.com/"><i class="fa fa-youtube"></i> YouTube</a>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
-                            1-206-555-1234</a><br />
-                        <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
-                                class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-sm-2 offset-1">
+                            <h5>Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="aboutus.html">About</a></li>
+                                <li><a href="#">Sites</a></li>
+                                <li><a href="contactus.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-5 text-center">
+                            <h5>Social</h5>
+                            <a href="http://instagram.com/"><i class="fa fa-instagram"></i> Instagram</a>
+                            <a href="http://facebook.com/"><i class="fa fa-facebook "></i> Facebook</a>
+                            <a href="http://twitter.com/"><i class="fa fa-twitter"></i> Twitter</a>
+                            <a href="http://youtube.com/"><i class="fa fa-youtube"></i> YouTube</a>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
+                                1-206-555-1234</a><br />
+                            <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
+                                    class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            </footer>
+            <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-        <script>
+            <script>
+                $(function () {
+                    $(".carousel").carousel({ interval: 2000, pause: "false" });
+                    $("#carouselPause").click(function () {
+                        $(".carousel").carousel("pause");
+                    });
+                    $("#carouselPlay").click(function () {
+                        $(".carousel").carousel("cycle");
+                    });
+                });
 
-           
 
-        </script>
+            </script>
 </body>
 
 </html>
